@@ -33,9 +33,8 @@ systemctl restart docker
 systemctl enable kubelet
 systemctl start kubelet
 
-yum install yum-utils device-mapper-persistent-data lvm2
+yum install yum-utils device-mapper-persistent-data lvm2 -y
 
-mkdir /etc/docker
 cat > /etc/docker/daemon.json <<EOF
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
