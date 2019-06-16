@@ -1,3 +1,3 @@
-FROM php:7.2.10-apache-stretch
+FROM php:apache
 COPY . /var/www/html/
 EXPOSE 80
